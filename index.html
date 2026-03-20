@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aumento de Sueldo</title>
+</head>
+
+<body>
+  <script type="module">
+    import cEmpresa from "./dist/controllers/Cl_cEmpresa.js";
+    new cEmpresa();
+  </script>
+
+  <section id="main">
+    <div class="container mt-5">
+      <h2>AUMENTO SUELDO</h2>
+
+      <button type="button" class="btn btn-primary" id="main_btNuevoPersonal">
+        Agregar Personal
+      </button>
+
+      <hr>
+
+      <div id="main_lblDetalle">
+        </div>
+
+      <br>
+
+      <div>
+        Total registros procesados: <span id="main_lblCantidadPersonal" class="fw-bold">0</span>
+      </div>
+
+      <div>
+        El total de monto adicional que debe pagar la empresa es de: $ <span id="main_lblMontoTotal" class="fw-bold">0</span>
+      </div>
+        <div>
+        El peso promedio es de :<span id="main_lblPesoPromedio" class="fw-bold">0</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="personal" hidden>
+    <div>
+      <h5 id="personal_lblPersonal">Datos del Trabajador</h5>
+    </div>
+    <div>
+      <label>Nombre:
+        <input type="text" class="form-control" id="personal_inNombre" placeholder="Ej: Juan">
+      </label>
+      <br><br>
+      <label>Tipo: 
+        <select id="personal_inTipo" class="form-control">
+          <option value="O">Obrero</option>
+          <option value="A">Administrativo</option>
+        </select>
+      </label>
+      <br><br>
+      <label>Sueldo actual:
+        <input type="number" class="form-control" id="personal_inSueldo" placeholder="Ej: 100">
+      </label>
+      <br><br>
+      <label>Peso:
+        <input type="text" class="form-control" id="personal_inPeso" placeholder="Ej: 70">
+      </label>
+      <br><br>
+    </div>
+    <br>
+    <div>
+      <button id="personal_btCancelar">Cancelar</button>
+      <button id="personal_btAceptar">Aceptar</button>
+    </div>
+  </section>
+
+</body>
+
+</html>
